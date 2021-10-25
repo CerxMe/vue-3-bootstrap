@@ -5,8 +5,10 @@ This repository provides a template for a Vue 3 application including the follow
 - Vue 3
 - Vue CLI 4
 - Vue Router
-- CSS Pre-processors
-- Linter and formatter
+- Vuex
+- ESLint and Prettier
+- Jest
+- SASS
 
 ## Before You Begin
 
