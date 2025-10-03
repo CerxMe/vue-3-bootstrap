@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// @ts-ignore - Used in Pug template
 import Chart from "../components/Chart.vue";
 </script>
 
