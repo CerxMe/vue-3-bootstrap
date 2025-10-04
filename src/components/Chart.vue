@@ -59,15 +59,15 @@ export default defineComponent({
             labels: {
               font: { size: 14, weight: '600' },
               padding: 20,
-              color: '#2c3e50',
+              color: '#cbd5e1',
             }
           },
           tooltip: {
-            backgroundColor: 'rgba(44, 62, 80, 0.95)',
+            backgroundColor: 'rgba(15, 23, 42, 0.95)',
             padding: 12,
             titleFont: { size: 14, weight: '600' },
             bodyFont: { size: 13 },
-            borderColor: '#667eea',
+            borderColor: '#60a5fa',
             borderWidth: 2,
             callbacks: {
               label: (ctx: any) => `Balance: $${ctx.parsed.y.toLocaleString()}`,
@@ -80,16 +80,16 @@ export default defineComponent({
               display: true,
               text: 'Balance ($)',
               font: { size: 13, weight: '600' },
-              color: '#5a6c7d',
+              color: '#cbd5e1',
             },
             ticks: {
               callback: (v: any) => `$${Number(v).toLocaleString()}`,
               font: { size: 12 },
-              color: '#5a6c7d',
+              color: '#94a3b8',
             },
             beginAtZero: false,
             grid: {
-              color: 'rgba(0, 0, 0, 0.05)',
+              color: 'rgba(148, 163, 184, 0.1)',
               drawTicks: false,
             }
           },
@@ -98,14 +98,14 @@ export default defineComponent({
               display: true,
               text: 'Year',
               font: { size: 13, weight: '600' },
-              color: '#5a6c7d',
+              color: '#cbd5e1',
             },
             ticks: {
               font: { size: 12 },
-              color: '#5a6c7d',
+              color: '#94a3b8',
             },
             grid: {
-              color: 'rgba(0, 0, 0, 0.05)',
+              color: 'rgba(148, 163, 184, 0.1)',
               drawTicks: false,
             }
           },
