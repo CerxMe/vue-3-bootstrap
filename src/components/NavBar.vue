@@ -11,12 +11,14 @@ nav.navbar
       li.nav-item
         router-link.nav-link(to="/") Home
       li.nav-item
-        router-link.nav-link(to="/test") Test Page
+        router-link.nav-link(to="/test") Compound Interest
+      li.nav-item
+        router-link.nav-link(to="/tax") Tax Calculator
 </template>
 
 <style lang="stylus" scoped>
 .navbar
-  background linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+  background linear-gradient(135deg, #1e293b 0%, #0f172a 100%)
   padding 1rem 2rem
   box-shadow 0 2px 20px rgba(0, 0, 0, 0.1)
   position sticky
