@@ -51,9 +51,24 @@ export default defineComponent({
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
-          legend: { display: true },
+          legend: {
+            display: true,
+            position: 'top' as const,
+            labels: {
+              font: { size: 14, weight: '600' },
+              padding: 20,
+              color: '#2c3e50',
+            }
+          },
           tooltip: {
+            backgroundColor: 'rgba(44, 62, 80, 0.95)',
+            padding: 12,
+            titleFont: { size: 14, weight: '600' },
+            bodyFont: { size: 13 },
+            borderColor: '#667eea',
+            borderWidth: 2,
             callbacks: {
               label: (ctx: any) => `Balance: $${ctx.parsed.y.toLocaleString()}`,
             },
@@ -61,11 +76,39 @@ export default defineComponent({
         },
         scales: {
           y: {
-            title: { display: true, text: 'Balance ($)' },
-            ticks: { callback: (v: any) => `$${Number(v).toLocaleString()}` },
+            title: {
+              display: true,
+              text: 'Balance ($)',
+              font: { size: 13, weight: '600' },
+              color: '#5a6c7d',
+            },
+            ticks: {
+              callback: (v: any) => `$${Number(v).toLocaleString()}`,
+              font: { size: 12 },
+              color: '#5a6c7d',
+            },
             beginAtZero: false,
+            grid: {
+              color: 'rgba(0, 0, 0, 0.05)',
+              drawTicks: false,
+            }
           },
-          x: { title: { display: true, text: 'Year' } },
+          x: {
+            title: {
+              display: true,
+              text: 'Year',
+              font: { size: 13, weight: '600' },
+              color: '#5a6c7d',
+            },
+            ticks: {
+              font: { size: 12 },
+              color: '#5a6c7d',
+            },
+            grid: {
+              color: 'rgba(0, 0, 0, 0.05)',
+              drawTicks: false,
+            }
+          },
         },
       },
     }));
@@ -99,8 +142,12 @@ export default defineComponent({
 <style scoped>
 .canvas-wrap {
   width: 100%;
-  max-width: 900px;
-  margin: 20px auto;
+  height: 450px;
+  position: relative;
 }
-canvas { display: block; width: 100%; height: 380px; }
+canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
 </style>
